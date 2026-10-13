@@ -4,6 +4,8 @@ export type Status = 'read' | 'reading'
 export type Book = {
     slug: string
     title: string
+    /** Shorter display title for the card — falls back to `title` when unset. */
+    shortTitle?: string
     author: string
     /** Open Library cover id — image served from covers.openlibrary.org */
     coverId?: number
@@ -69,6 +71,7 @@ export const BOOKS: Book[] = [
     {
         slug: 'stoicism-theodore-scott',
         title: 'Stoicism: The Ultimate Guide to Gain Resilience, Wisdom, Self Discipline, Calmness, and Critical Thinking Through the Teachings of Ancient Stoics',
+        shortTitle: 'Stoicism',
         author: 'Theodore Scott',
         coverSrc:
             'https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1569403951l/49433442.jpg',

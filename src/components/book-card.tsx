@@ -16,8 +16,11 @@ export function BookCard({ book }: { book: Book }) {
 
             <div className="flex min-w-0 flex-1 flex-col">
                 <div className="flex items-start justify-between gap-2">
-                    <h3 className="text-[15px] font-semibold leading-snug tracking-[-0.01em] text-[var(--rd-text)] sm:text-base">
-                        {book.title}
+                    <h3
+                        className="text-[15px] font-semibold leading-snug tracking-[-0.01em] text-[var(--rd-text)] sm:text-base"
+                        title={book.shortTitle ? book.title : undefined}
+                    >
+                        {book.shortTitle ?? book.title}
                     </h3>
                     {book.status === 'reading' && (
                         <span className="rd-chip shrink-0 !border-[var(--rd-accent-bg)] !bg-[var(--rd-accent-bg)] !px-2 !py-0.5 !text-[11px] !text-[var(--rd-accent-ink)]">
