@@ -304,6 +304,9 @@ export default function Navbar() {
                     <a href={MUSIC_URL} className={`${linkClass} hidden lg:inline`}>
                         music
                     </a>
+                    <a href={BOOK_URL} className={`${linkClass} hidden xl:inline`}>
+                        book
+                    </a>
                     <a href={STATUS_URL} className={`${linkClass} hidden xl:inline`}>
                         status
                     </a>
