@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import {
+    RiBookOpenLine,
     RiBookShelfLine,
     RiGithubFill,
     RiHome5Line,
@@ -17,6 +18,7 @@ import {
 } from '@remixicon/react'
 import {
     BASE_URL,
+    BLOG_URL,
     BOOK_URL,
     GALLERY_URL,
     GITHUB,
@@ -60,6 +62,13 @@ const COLUMNS: Column[] = [
                 desc: 'profile & writing',
                 href: BASE_URL,
                 icon: RiHome5Line,
+                external: true,
+            },
+            {
+                label: 'blog',
+                desc: 'notes & posts',
+                href: BLOG_URL,
+                icon: RiBookOpenLine,
                 external: true,
             },
             {
@@ -283,11 +292,20 @@ export default function Navbar() {
                     <a href={BASE_URL} className={linkClass}>
                         home
                     </a>
+                    <a href={BLOG_URL} className={linkClass}>
+                        blog
+                    </a>
                     <a href={INSIGHT_URL} className={linkClass}>
                         insight
                     </a>
-                    <a href={GALLERY_URL} className={linkClass}>
+                    <a href={GALLERY_URL} className={`${linkClass} hidden lg:inline`}>
                         gallery
+                    </a>
+                    <a href={MUSIC_URL} className={`${linkClass} hidden lg:inline`}>
+                        music
+                    </a>
+                    <a href={STATUS_URL} className={`${linkClass} hidden xl:inline`}>
+                        status
                     </a>
                 </div>
             </div>

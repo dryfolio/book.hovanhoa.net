@@ -3,6 +3,7 @@ const FULL_NAME = 'Hồ Văn Hòa'
 const ROLE = 'Software Engineer'
 
 const BASE_URL = 'https://hovanhoa.net'
+const BLOG_URL = 'https://blog.hovanhoa.net'
 const INSIGHT_URL = 'https://insight.hovanhoa.net'
 const GALLERY_URL = 'https://gallery.hovanhoa.net'
 const MUSIC_URL = 'https://music.hovanhoa.net'
@@ -24,6 +25,7 @@ export {
     GITHUB,
     IMAGE,
     BASE_URL,
+    BLOG_URL,
     INSIGHT_URL,
     GALLERY_URL,
     MUSIC_URL,
